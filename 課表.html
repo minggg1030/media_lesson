@@ -1,0 +1,80 @@
+
+
+
+<!DOCTYPE html> 
+<!-- 以html5解析 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課表</title>
+</head>
+<body>
+    <h1>網路程式設計 第三章(table)</h1>
+    <br/>
+    <hr>
+    <table>
+       <!-- 功課表 -->
+       <tr>
+            <td colspan="9"> 陳洺安的功課表 </td>
+       </tr>
+       <tr>
+            <td rowspan="13" ; class="vertical-text" > 中原大學資工系</td>
+       </tr>
+       <tr>
+            <td>時段/星期</td>
+            <td>星期一</td>
+            <td>星期二</td>
+            <td>星期三</td>
+            <td>星期四</td>
+            <td>星期五</td>
+            <td>星期六</td>
+            <td>星期日</td>
+       </tr>
+       <tr><td>07:10 - 08:00</td> <td></td><td></td><td></td><td></td><td>軟體專案管理</td><td colspan="2" ; rowspan="13" ; class="vertical-text" > 快樂在家睡覺</td></tr>
+       <tr><td>09:10 - 10:00</td> <td></td><td></td><td>軟體專案管理</td><td>多媒體程式設計</td><td>軟體專案管理</td></tr>
+       <tr><td>10:10 - 11:00</td> <td>電子學</td><td>資料結構與演算法</td><td></td><td>多媒體程式設計</td><td>物件導向程式設計</td></tr>
+       <tr><td>11:10 - 12:00</td> <td>物件導向程式設計</td><td>資料結構與演算法</td><td>資管專題討論</td><td>多媒體程式設計</td><td>物件導向程式設計</td></tr>
+       <tr><td>12:10 - 13:00</td> <td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td>13:10 - 14:00</td> <td></td><td>電子實驗</td><td>中西學家的生命觀</td><td>電子學</td><td>計算機組織</td></tr>
+       <tr><td>14:10 - 15:00</td> <td>資料結構與演算法</td><td>電子實驗</td><td>中西學家的生命觀</td><td>電子學</td><td></td></tr>
+       <tr><td>15:10 - 16:00</td> <td>計算機組織</td><td>電子實驗</td><td></td><td></td><td></td></tr>
+       <tr><td>16:10 - 17:00</td> <td>計算機組織</td><td class="color-change">網路程式設計</td><td>英文報告(一)</td><td></td><td></td></tr>
+       <tr><td>17:05 - 17:55</td> <td></td><td class="color-change">網路程式設計</td><td>哲學概論</td><td></td><td></td></tr>
+       <tr><td>18:00 - 18:50</td> <td></td><td class="color-change">網路程式設計</td><td>哲學概論</td><td></td><td></td></tr>
+ 
+
+    </table>
+
+
+    
+
+</body>
+</html>
+<style> 
+    /* 套用目前網頁的css */
+    table {
+        border: 1px solid black;
+    }
+    h2 {
+        width:fit-content;
+        background-color: aqua;
+    }
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+    td.vertical-text {
+            writing-mode: vertical-rl; 
+            text-orientation: upright; 
+    }
+    td.color-change {
+        background-color :rgb(179, 139, 216) 
+    }
+    p {
+        font-size: large;
+        float: left;
+        color: black;
+    }
+    
+</style>
