@@ -6,14 +6,124 @@
     <title>網路程式設計NOTE</title>
 </head>
 <body>
-    <h1>第一章</h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
+    <h1>第一章</h1><hr>
+    <article>
+        <pre>
+            (1.0) 環境安裝
+                jdk 可以用 java --version [確認安裝版本]
+                Nodepad++ [方便內碼轉碼]
+                tomcat [此堂課使用的web server]
+                何謂java.servlet :  https://iter01.com/567716.html
+
+            (1.4) 相關技術
+                電腦之間溝通的橋樑 - 協定 ( protocol ) [ 不同OSI層有不同溝通方式 ] 
+                允許不同規格主機/OS可以通訊
+                internet 使用 TCP/IP 模型, www使用其中的HTTP
+                ICMP => 當我們ping 對方時，會發送四個ICMP封包給對方(如下圖)
+                ※用wireshark可以捕獲封包
+          
+                ※ARP 欺騙工作原理 如果局域網內計算機 C 對計算機 A，發送假的 ARP 應答(IP 是計算機 B， MAC 為假造)，則計算機 A 變會更新本地的 ARP 緩存，由於局域網中是透過 MAC 地址傳輸，便導致計算機 B 無法連網，計算機 A 也 PING 不到計算機 B
+                查詢內網IP的方法
+                ping domain_name
+                nslookup domain_name
+                通訊埠 port
+                通訊協定是以通訊埠對應網路應用
+                16bits表示
+                理論上可達1~65535個網路應用服務
+                1~1023為公認埠號
+                用戶端是變動的&& 伺服器端是固定的
+                1024之後埠號，程序結束後自動釋放
+                ex: FTP:21 HTTP:80 HTTPS:443 TELNET:23 TOMCAT: 8080 MYSQL:3306
+                查詢埠號狀態: netstat -an
+                ex : TCP 140.XXX.XXX.XXX:139 74.XXX.XXX.XXX:5528 如果非127.0.0.1(自己)或正常應用可能有木馬或安全漏洞
+
+          (1.5) www ( world wide web )
+                中文 : 全球資訊網  陸 : 互聯網
+                傳遞多媒體訊息
+                使用html為文件標準
+                使用http協定
+                主從式架構
+            
+                https://網域名稱/檔案位置(虛擬or實體)  http明碼/https加密
+
+                ★ 瀏覽網頁三大要素
+
+                    1.網址(ip)
+                    2.網頁檔案(未註明表server內定檔案)
+                    3.port
+
+                https 的 web server 需經過驗證才可以提供服務
+                自架webs server 租用虛擬主機 => 申請網域名稱(github 無法支援後端DB動態網頁)
+
+                JSP( java server page )
+                使用java平台技術( jsp -> servlet(.java) -> .class -> jvm ) 跨平台
+                眾多金融、購物網站使用(安全性高，user看不到程式碼)
+                一種html內嵌式描述
+                與瀏覽器無關
+                支援多種web server
+                結合多種db POSTGRESQL. ODBC
+                ★ 前後端都使用javascript -> Node.js 
+            </pre>
+            
+            <table>
+                <tr>
+                    <td>語言</td>
+                    <td>企業規模</td>
+                    <td>特色</td>
+                </tr>
+                <tr>
+                    <td>ASP</td>
+                    <td>JSP</td>
+                    <td>PHP</td>
+                </tr>
+                <tr>
+                    <td>中大型</td>
+                    <td>大型企業</td>
+                    <td>小型企業</td>
+                </tr>
+                <tr>
+                    <td>微軟DB</td>
+                    <td>資訊安全</td>
+                    <td>free</td>
+                </tr>
+
+            </table>
+                		
+                		
+                		
+                		
+
+            <pre>
+                速度 :
+                第一次run , jsp需要轉.java檔servlet(過程較慢)，但.java經過compile成.class之後就可以再有JVM上的計算機上執行
+                ★ tomcat是一個servlet 容器
+                    -----------------------------------------------------------------------------------------------------------------------------
+                JSP缺點 :
+                    商業與呈現邏輯複雜
+                    難debug
+                    無法達成mvc架構(code.呈現.data) --> javaweb[可以達成mvc]
+                    Model：後端資料庫進行運作
+                    View：前端畫面與邏輯顯示
+                    Controller：處理控制流程和回應，以路由以傳遞資料為主
+            </pre>
+
+        </pre>
+
+
+
+
+
+
+
+
+    </article>
+    <h1>第二章</h1>
+    <h1>第三章</h1>
+    <h1>第四章</h1>
+    <h1>第五章</h1>
+    <h1>第六章</h1>
+    <h1>第七章</h1>
+    <h1>第八章</h1>
 
 
     
